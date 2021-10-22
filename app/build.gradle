@@ -37,6 +37,7 @@ android {
 
     testOptions.unitTests {
         includeAndroidResources = true
+        returnDefaultValues = true
     }
 
     //dataBinding {
@@ -62,6 +63,7 @@ dependencies {
     implementation "androidx.legacy:legacy-support-v4:$androidXLegacySupport"
     implementation "androidx.room:room-runtime:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
 
     // Architecture Components
     implementation "androidx.room:room-runtime:$roomVersion"
@@ -97,6 +99,7 @@ dependencies {
     // AndroidX Test - Instrumented testing
     androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$archTestingVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
